@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+<html lang="en">
+<script>
+    function checkInt(target) {
+        if(isNaN(target.value)){
+            alert("数值类型非法")
+            target.value="";
+        }
+    }
+</script>
+<body>
+<form action="/hello/test4.do" >
+    name:<input type="text" name="name" /><br />
+    age:<input id="age" type="text" onblur="checkInt(this)" name="age" /><br />
+    isMarry:<input type="checkbox" name="isMarry"/><br />
+    income:<input type="text" name="income" onblur="checkInt(this)" /><br />
+    interests:<input type="checkbox" name="interests" value="bb" />basketball
+    <input type="checkbox" name="interests" value="fb" />football
+    <input type="checkbox" name="interests" value="vb" />vollyball<br />
+    <input type="submit" value="提交" />
+</form>
+
+</body>
+</html>
